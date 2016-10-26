@@ -129,7 +129,7 @@
         "description": "Base URL for Artifacts",
         "artifactsBaseUrl": ""
       },
-      "defaultValue": "https://raw.githubusercontent.com/sbalusu579/AzureBestPractices/cloudbees/cloudbeesjenkins-dockerdatacenter"
+      "defaultValue": "https://raw.githubusercontent.com/sysgain/p2pbestpractices/cloudbees/cloudbeesjenkins-dockerdatacenter"
     }
   },
   "variables": {
