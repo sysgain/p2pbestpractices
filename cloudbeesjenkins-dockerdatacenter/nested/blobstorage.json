@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "name": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the BlobStorage."
+      }
+    },
+    "accountType": {
+      "type": "string",
+      "metadata": {
+        "description": "The accountType of the BlobStorage."
+      }
+    },
+    "location": {
+      "type": "string",
+      "metadata": {
+        "description": "The location of the BlobStorage."
+      }
+    },
+    "encryptionEnabled": {
+      "type": "bool",
+      "defaultValue": false,
+      "metadata": {
+        "description": "Whether the encryption enabled or not."
+      }
+    },
+    "accessTier": {
+      "type": "string",
+      "allowedValues": [
+        "Cool",
+        "Hot"
+      ],
+      "metadata": {
+        "description": "The name of the accessTier."
+      }
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2016-01-01",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "type": "Microsoft.Storage/storageAccounts",
+      "comments": "This storage account is used to store the VM disks",
+      "sku": {
+        "name": "[parameters('accountType')]"
+      },
+      "kind": "BlobStorage",
+      "properties": {
+        "accessTier": "[parameters('accessTier')]",
+        "encryption": {
+          "services": {
+            "blob": {
+              "enabled": "[parameters('encryptionEnabled')]"
+            }
+          },
+          "keySource": "Microsoft.Storage"
+        }
+      }
+    }
+  ]
+}
