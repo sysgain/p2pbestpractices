@@ -183,9 +183,6 @@
       "name": "storageTemplate",
       "type": "Microsoft.Resources/deployments",
       "comments": "This resource is used for deployments",
-      "tags": {
-        "deployment": "cloudbeesjenkins-dockerdatacenter"
-      },
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -464,9 +461,6 @@
       "name": "publicIPTemplate",
       "type": "Microsoft.Resources/deployments",
       "comments": "This deployment is used to create the publicIp",
-      "tags": {
-        "deployment": "cloudbeesjenkins-dockerdatacenter"
-      },
       "properties": {
         "mode": "Incremental",
         "templateLink": {

@@ -841,9 +841,6 @@
       "apiVersion": "[variables('linkTemplateApiVersion')]",
       "name": "[concat('ucpController', copyindex())]",
       "type": "Microsoft.Resources/deployments",
-      "tags": {
-        "deployment": "cloudbeesjenkins-dockerdatacenter"
-      },
       "comments": "This resource is used for deployments",
       "copy": {
         "name": "ucpControllerSet",
@@ -920,9 +917,6 @@
       "apiVersion": "[variables('linkTemplateApiVersion')]",
       "name": "[concat('ucpNode', copyindex())]",
       "type": "Microsoft.Resources/deployments",
-      "tags": {
-        "deployment": "cloudbeesjenkins-dockerdatacenter"
-      },
       "comments": "This resource is used for deployments",
       "copy": {
         "name": "ucpNodeSet",
@@ -999,9 +993,6 @@
       "apiVersion": "[variables('linkTemplateApiVersion')]",
       "name": "[concat('ucpDtrNode', copyindex())]",
       "type": "Microsoft.Resources/deployments",
-      "tags": {
-        "deployment": "cloudbeesjenkins-dockerdatacenter"
-      },
       "comments": "This resource is used for deployments",
       "copy": {
         "name": "ucpDtrNodeSet",
