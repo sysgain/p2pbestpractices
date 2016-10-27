@@ -174,6 +174,9 @@
       "name": "virtualNetworkDeployment",
       "type": "Microsoft.Resources/deployments",
       "comments": "This deployment is used to deploy the virtual networks",
+      "tags": {
+        "deployment": "cloudbeesjenkins-dockerdatacenter"
+      },
       "properties": {
         "mode": "incremental",
         "templateLink": {
@@ -219,6 +222,9 @@
       "name": "cloudbeesDeployment",
       "type": "Microsoft.Resources/deployments",
       "comments": "This deployment is used to deploy the cloudbees",
+      "tags": {
+        "deployment": "cloudbeesjenkins-dockerdatacenter"
+      },
       "dependsOn": [
         "['Microsoft.Resources/deployments/virtualNetworkDeployment']"
       ],
@@ -282,6 +288,9 @@
       "name": "dockerDatacenterDeployment",
       "type": "Microsoft.Resources/deployments",
       "comments": "This deployment is used to deploy the dockerDatacenter",
+      "tags": {
+        "deployment": "cloudbeesjenkins-dockerdatacenter"
+      },
       "dependsOn": [
         "['Microsoft.Resources/deployments/virtualNetworkDeployment']"
       ],

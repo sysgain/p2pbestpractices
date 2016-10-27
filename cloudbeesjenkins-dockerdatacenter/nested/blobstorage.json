@@ -45,6 +45,9 @@
       "location": "[parameters('location')]",
       "type": "Microsoft.Storage/storageAccounts",
       "comments": "This storage account is used to store the VM disks",
+      "tags": {
+        "deployment": "cloudbeesjenkins-dockerdatacenter"
+      },
       "sku": {
         "name": "[parameters('accountType')]"
       },

@@ -57,6 +57,9 @@
       "name": "jenkins-0/startupScript",
       "apiVersion": "2016-03-30",
       "location": "[parameters('location')]",
+      "tags": {
+        "deployment": "cloudbeesjenkins-dockerdatacenter"
+      },
       "properties": {
         "publisher": "Microsoft.Azure.Extensions",
         "type": "CustomScript",

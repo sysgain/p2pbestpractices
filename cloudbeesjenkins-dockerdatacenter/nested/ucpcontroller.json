@@ -138,6 +138,9 @@
       "name": "[variables('nicName')]",
       "location": "[parameters('location')]",
       "comments": "This resource is used to deploy the networkInterface",
+      "tags": {
+        "deployment": "cloudbeesjenkins-dockerdatacenter"
+      },
       "dependsOn": [],
       "properties": {
         "ipConfigurations": [
@@ -168,6 +171,9 @@
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[concat(parameters('vmNamePrefix'), '-ucpctrl')]",
       "location": "[parameters('location')]",
+      "tags": {
+        "deployment": "cloudbeesjenkins-dockerdatacenter"
+      },
       "comments": "This resource is used to deploy the virtualMachine",
       "plan": {
         "name": "[parameters('imageSKU')]",

@@ -151,10 +151,10 @@
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[concat(parameters('vmName'))]",
       "location": "[parameters('location')]",
-      "comments": "This resource is used to deploy the virtualMachine",
       "tags": {
         "[parameters('tag').key1]": "[parameters('tag').value1]"
       },
+      "comments": "This resource is used to deploy the virtualMachine",
       "plan": {
         "name": "jenkins-enterprise",
         "publisher": "cloudbees",
@@ -199,6 +199,9 @@
           "type": "Microsoft.Compute/virtualMachines/extensions",
           "name": "jenkins/customScript",
           "location": "[parameters('location')]",
+          "tags": {
+            "deployment": "cloudbeesjenkins-dockerdatacenter"
+          },
           "comments": "This resource is used to deploy the virtualMachine extensions",
           "dependsOn": [
             "[concat('Microsoft.Compute/virtualMachines/jenkins')]"

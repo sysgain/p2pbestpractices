@@ -61,7 +61,8 @@
       "apiVersion": "[parameters('storageApiVersion')]",
       "location": "[parameters('location')]",
       "tags": {
-        "[parameters('tag').key1]": "[parameters('tag').value1]"
+        "[parameters('tag').key1]": "[parameters('tag').value1]",
+        "deployment": "cloudbeesjenkins-dockerdatacenter"
       },
       "properties": {
         "accountType": "[parameters('storageAccountType')]"

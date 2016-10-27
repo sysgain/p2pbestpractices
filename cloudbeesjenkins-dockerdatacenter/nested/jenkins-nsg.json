@@ -41,10 +41,10 @@
       "type": "Microsoft.Network/networkSecurityGroups",
       "name": "[parameters('networkSecurityGroupName')]",
       "location": "[parameters('location')]",
-      "comments": "This resource is used to deploy the networkSecurityGroups",
       "tags": {
         "[parameters('tag').key1]": "[parameters('tag').value1]"
       },
+      "comments": "This resource is used to deploy the networkSecurityGroups",
       "properties": {
         "securityRules": [
           {

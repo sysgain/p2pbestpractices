@@ -74,6 +74,9 @@
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[parameters('virtualNetworkName')]",
       "location": "[parameters('location')]",
+      "tags": {
+        "deployment": "cloudbeesjenkins-dockerdatacenter"
+      },
       "comments": "This resource is used to deploy the virtualNetwork",
       "properties": {
         "addressSpace": {

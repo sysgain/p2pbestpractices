@@ -167,10 +167,10 @@
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[parameters('vmName')]",
       "location": "[parameters('location')]",
-      "comments": "This resource is used to deploy the virtualMachine",
       "tags": {
         "[parameters('tag').key1]": "[parameters('tag').value1]"
       },
+      "comments": "This resource is used to deploy the virtualMachine",
       "plan": {
         "name": "[parameters('imageSku')]",
         "publisher": "[parameters('imagePublisher')]",
@@ -217,6 +217,9 @@
           "type": "Microsoft.Compute/virtualMachines/extensions",
           "name": "operations-center/CustomScript",
           "location": "[parameters('location')]",
+          "tags": {
+            "deployment": "cloudbeesjenkins-dockerdatacenter"
+          },
           "comments": "This resource is used to deploy the virtualMachine extensions",
           "dependsOn": [
             "Microsoft.Compute/virtualMachines/operations-center"
